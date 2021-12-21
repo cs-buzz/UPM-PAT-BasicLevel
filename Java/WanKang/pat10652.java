@@ -16,21 +16,21 @@ public class pat10652 {
 			int n1 = (int)st.nval;
 			st.nextToken();
 			int n2 = (int)st.nval;
-			couple[n1] = n2;				//ÔÚÊı×éÎ»ÖÃ¼ÇÂ¼°éÂÂ
+			couple[n1] = n2;				//åœ¨æ•°ç»„ä½ç½®è®°å½•ä¼´ä¾£
 			couple[n2] = n1;
 		}
 		
 		st.nextToken();
 		int M = (int)st.nval;
-		int[] attend = new int[M];			//ÓÃÀ´¼ÇÂ¼²Î¼ÓÈËÔ± 
+		int[] attend = new int[M];			//ç”¨æ¥è®°å½•å‚åŠ äººå‘˜ 
 		for(int i=0;i<M;i++) {
 			st.nextToken();
 			int m = (int)st.nval;
 			attend[i] = m;
 		}
 		
-		int[] output = new int[M];			//ÓÃÀ´¼ÇÂ¼µ¥ÉíÈËÔ± 
-		int single = 0;						//¼ÇÂ¼µ¥ÉíÈËÊı
+		int[] output = new int[M];			//ç”¨æ¥è®°å½•å•èº«äººå‘˜ 
+		int single = 0;						//è®°å½•å•èº«äººæ•°
 		for(int i=0;i<M;i++) {
 			boolean isSingle = true;
 			for(int j=0;j<M;j++) {
@@ -47,8 +47,8 @@ public class pat10652 {
 		
 		System.out.println(single);
 		Arrays.sort(output);
-		for(int i=M-single;i<M-1;i++) System.out.printf("%5d ",output[i]);
-		System.out.printf("%5d\n",output[M-1]);
+		for(int i=M-single;i<M-1;i++) System.out.printf("%05d ",output[i]);
+		System.out.printf("%05d\n",output[M-1]);
 	}
 
 }
